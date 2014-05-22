@@ -1,0 +1,599 @@
+lgml-bechristensen:StreamProcessor benjchristensen$ ./gradlew benchmarks '-Pjmh=-f 1 -tu s -bm thrpt -wi 5 -i 5 -r 10 -prof GC .*PerfTest.*'
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:benchmarks
+# Run progress: 0.00% complete, ETA 00:12:50
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.liftMultiStep
+# Parameters: (size = 1)
+# Warmup Iteration   1: 12597664.367 ops/s
+# Warmup Iteration   2: 14616114.017 ops/s
+# Warmup Iteration   3: 15329451.100 ops/s
+# Warmup Iteration   4: 15344290.817 ops/s
+# Warmup Iteration   5: 15336669.117 ops/s
+Iteration   1: 15498405.450 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.118 secs, GC% = 1.18%, GC count = +300
+             |
+
+Iteration   2: 15380328.983 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.119 secs, GC% = 1.19%, GC count = +297
+             |
+
+Iteration   3: 15486800.833 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.120 secs, GC% = 1.20%, GC count = +300
+             |
+
+Iteration   4: 15498880.550 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.118 secs, GC% = 1.18%, GC count = +300
+             |
+
+Iteration   5: 15494271.950 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.119 secs, GC% = 1.19%, GC count = +300
+             |
+
+
+Result : 15471737.553 ±(99.9%) 197644.846 ops/s
+  Statistics: (min, avg, max) = (15380328.983, 15471737.553, 15498880.550), stdev = 51327.739
+  Confidence interval (99.9%): [15274092.707, 15669382.399]
+
+
+# Run progress: 7.14% complete, ETA 00:11:58
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.liftMultiStep
+# Parameters: (size = 1024)
+# Warmup Iteration   1: 10905.567 ops/s
+# Warmup Iteration   2: 12359.650 ops/s
+# Warmup Iteration   3: 12348.117 ops/s
+# Warmup Iteration   4: 12206.433 ops/s
+# Warmup Iteration   5: 12248.800 ops/s
+Iteration   1: 12320.200 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.096 secs, GC% = 0.96%, GC count = +227
+             |
+
+Iteration   2: 12262.317 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +241
+             |
+
+Iteration   3: 12287.850 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +239
+             |
+
+Iteration   4: 12288.717 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +234
+             |
+
+Iteration   5: 12236.217 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.096 secs, GC% = 0.96%, GC count = +228
+             |
+
+
+Result : 12279.060 ±(99.9%) 121.447 ops/s
+  Statistics: (min, avg, max) = (12236.217, 12279.060, 12320.200), stdev = 31.539
+  Confidence interval (99.9%): [12157.613, 12400.507]
+
+
+# Run progress: 14.29% complete, ETA 00:11:03
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.liftMultiSubscribe
+# Parameters: (size = 1)
+# Warmup Iteration   1: 12498666.883 ops/s
+# Warmup Iteration   2: 14416958.950 ops/s
+# Warmup Iteration   3: 14531362.650 ops/s
+# Warmup Iteration   4: 14384767.717 ops/s
+# Warmup Iteration   5: 14562749.433 ops/s
+Iteration   1: 14552454.217 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +244
+             |
+
+Iteration   2: 14413679.100 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +243
+             |
+
+Iteration   3: 14375996.200 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.102 secs, GC% = 1.02%, GC count = +241
+             |
+
+Iteration   4: 14499204.133 ops/s
+          GC | wall time = 10.000 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +243
+             |
+
+Iteration   5: 14398442.167 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +243
+             |
+
+
+Result : 14447955.163 ±(99.9%) 287840.378 ops/s
+  Statistics: (min, avg, max) = (14375996.200, 14447955.163, 14552454.217), stdev = 74751.232
+  Confidence interval (99.9%): [14160114.785, 14735795.542]
+
+
+# Run progress: 21.43% complete, ETA 00:10:07
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.liftMultiSubscribe
+# Parameters: (size = 1024)
+# Warmup Iteration   1: 7306.233 ops/s
+# Warmup Iteration   2: 8498.383 ops/s
+# Warmup Iteration   3: 8421.467 ops/s
+# Warmup Iteration   4: 8424.833 ops/s
+# Warmup Iteration   5: 8467.950 ops/s
+Iteration   1: 8549.433 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +224
+             |
+
+Iteration   2: 8395.983 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +227
+             |
+
+Iteration   3: 8272.700 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +228
+             |
+
+Iteration   4: 8339.417 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.096 secs, GC% = 0.96%, GC count = +227
+             |
+
+Iteration   5: 8334.567 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +228
+             |
+
+
+Result : 8378.420 ±(99.9%) 404.662 ops/s
+  Statistics: (min, avg, max) = (8272.700, 8378.420, 8549.433), stdev = 105.089
+  Confidence interval (99.9%): [7973.758, 8783.082]
+
+
+# Run progress: 28.57% complete, ETA 00:09:12
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.liftSingleSubscribe
+# Parameters: (size = 1)
+# Warmup Iteration   1: 23956878.267 ops/s
+# Warmup Iteration   2: 26211739.483 ops/s
+# Warmup Iteration   3: 25996726.467 ops/s
+# Warmup Iteration   4: 26615982.650 ops/s
+# Warmup Iteration   5: 26322587.150 ops/s
+Iteration   1: 26691473.183 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.103 secs, GC% = 1.03%, GC count = +247
+             |
+
+Iteration   2: 26799579.917 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.103 secs, GC% = 1.03%, GC count = +248
+             |
+
+Iteration   3: 26913983.817 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.102 secs, GC% = 1.02%, GC count = +248
+             |
+
+Iteration   4: 26673981.550 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.102 secs, GC% = 1.02%, GC count = +248
+             |
+
+Iteration   5: 26826745.217 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.103 secs, GC% = 1.03%, GC count = +249
+             |
+
+
+Result : 26781152.737 ±(99.9%) 383087.870 ops/s
+  Statistics: (min, avg, max) = (26673981.550, 26781152.737, 26913983.817), stdev = 99486.703
+  Confidence interval (99.9%): [26398064.867, 27164240.607]
+
+
+# Run progress: 35.71% complete, ETA 00:08:17
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.liftSingleSubscribe
+# Parameters: (size = 1024)
+# Warmup Iteration   1: 15171.467 ops/s
+# Warmup Iteration   2: 16880.833 ops/s
+# Warmup Iteration   3: 17072.683 ops/s
+# Warmup Iteration   4: 17091.017 ops/s
+# Warmup Iteration   5: 17560.167 ops/s
+Iteration   1: 17099.033 ops/s
+          GC | wall time = 10.000 secs,  GC time = 0.099 secs, GC% = 0.99%, GC count = +236
+             |
+
+Iteration   2: 16913.917 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +231
+             |
+
+Iteration   3: 16810.400 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.095 secs, GC% = 0.95%, GC count = +222
+             |
+
+Iteration   4: 16742.967 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.107 secs, GC% = 1.07%, GC count = +226
+             |
+
+Iteration   5: 16748.533 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +224
+             |
+
+
+Result : 16862.970 ±(99.9%) 573.027 ops/s
+  Statistics: (min, avg, max) = (16742.967, 16862.970, 17099.033), stdev = 148.813
+  Confidence interval (99.9%): [16289.943, 17435.997]
+
+
+# Run progress: 42.86% complete, ETA 00:07:22
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.processWithSupplier
+# Parameters: (size = 1)
+# Warmup Iteration   1: 24525074.817 ops/s
+# Warmup Iteration   2: 27573660.267 ops/s
+# Warmup Iteration   3: 27663958.233 ops/s
+# Warmup Iteration   4: 27351994.533 ops/s
+# Warmup Iteration   5: 26960891.617 ops/s
+Iteration   1: 27467669.350 ops/s
+          GC | wall time = 10.000 secs,  GC time = 0.100 secs, GC% = 1.00%, GC count = +243
+             |
+
+Iteration   2: 27771855.733 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.100 secs, GC% = 1.00%, GC count = +244
+             |
+
+Iteration   3: 27781694.317 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +242
+             |
+
+Iteration   4: 27627505.283 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +241
+             |
+
+Iteration   5: 27478153.250 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +243
+             |
+
+
+Result : 27625375.587 ±(99.9%) 585380.799 ops/s
+  Statistics: (min, avg, max) = (27467669.350, 27625375.587, 27781694.317), stdev = 152021.535
+  Confidence interval (99.9%): [27039994.788, 28210756.386]
+
+
+# Run progress: 50.00% complete, ETA 00:06:26
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.processWithSupplier
+# Parameters: (size = 1024)
+# Warmup Iteration   1: 15145.833 ops/s
+# Warmup Iteration   2: 17236.117 ops/s
+# Warmup Iteration   3: 17289.300 ops/s
+# Warmup Iteration   4: 17183.633 ops/s
+# Warmup Iteration   5: 17577.867 ops/s
+Iteration   1: 17102.600 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +230
+             |
+
+Iteration   2: 16966.783 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +231
+             |
+
+Iteration   3: 16898.917 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +234
+             |
+
+Iteration   4: 16946.717 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +231
+             |
+
+Iteration   5: 16929.017 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +233
+             |
+
+
+Result : 16968.807 ±(99.9%) 303.570 ops/s
+  Statistics: (min, avg, max) = (16898.917, 16968.807, 17102.600), stdev = 78.836
+  Confidence interval (99.9%): [16665.237, 17272.377]
+
+
+# Run progress: 57.14% complete, ETA 00:05:31
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.processWithSupplierMultiSubscribe
+# Parameters: (size = 1)
+# Warmup Iteration   1: 13257554.650 ops/s
+# Warmup Iteration   2: 15054464.517 ops/s
+# Warmup Iteration   3: 15174425.183 ops/s
+# Warmup Iteration   4: 15357131.233 ops/s
+# Warmup Iteration   5: 15277291.550 ops/s
+Iteration   1: 15373617.200 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.099 secs, GC% = 0.99%, GC count = +238
+             |
+
+Iteration   2: 15299547.083 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +237
+             |
+
+Iteration   3: 15354945.017 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.100 secs, GC% = 1.00%, GC count = +236
+             |
+
+Iteration   4: 15331413.783 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.099 secs, GC% = 0.99%, GC count = +236
+             |
+
+Iteration   5: 15380812.517 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.099 secs, GC% = 0.99%, GC count = +240
+             |
+
+
+Result : 15348067.120 ±(99.9%) 127768.007 ops/s
+  Statistics: (min, avg, max) = (15299547.083, 15348067.120, 15380812.517), stdev = 33180.946
+  Confidence interval (99.9%): [15220299.113, 15475835.127]
+
+
+# Run progress: 64.29% complete, ETA 00:04:36
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.processWithSupplierMultiSubscribe
+# Parameters: (size = 1024)
+# Warmup Iteration   1: 7234.917 ops/s
+# Warmup Iteration   2: 8481.033 ops/s
+# Warmup Iteration   3: 8480.100 ops/s
+# Warmup Iteration   4: 8397.417 ops/s
+# Warmup Iteration   5: 8399.100 ops/s
+Iteration   1: 8503.167 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +226
+             |
+
+Iteration   2: 8576.267 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +233
+             |
+
+Iteration   3: 8521.933 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +227
+             |
+
+Iteration   4: 8530.033 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +231
+             |
+
+Iteration   5: 8514.983 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +227
+             |
+
+
+Result : 8529.277 ±(99.9%) 108.034 ops/s
+  Statistics: (min, avg, max) = (8503.167, 8529.277, 8576.267), stdev = 28.056
+  Confidence interval (99.9%): [8421.242, 8637.311]
+
+
+# Run progress: 71.43% complete, ETA 00:03:41
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.processWithSupplierMultistep
+# Parameters: (size = 1)
+# Warmup Iteration   1: 11741174.800 ops/s
+# Warmup Iteration   2: 13154031.450 ops/s
+# Warmup Iteration   3: 13424970.583 ops/s
+# Warmup Iteration   4: 13490228.300 ops/s
+# Warmup Iteration   5: 12767018.067 ops/s
+Iteration   1: 13406189.217 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.102 secs, GC% = 1.02%, GC count = +246
+             |
+
+Iteration   2: 13341387.033 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.103 secs, GC% = 1.03%, GC count = +242
+             |
+
+Iteration   3: 13334109.033 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +243
+             |
+
+Iteration   4: 13385756.667 ops/s
+          GC | wall time = 10.000 secs,  GC time = 0.103 secs, GC% = 1.03%, GC count = +246
+             |
+
+Iteration   5: 13419394.617 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.102 secs, GC% = 1.02%, GC count = +246
+             |
+
+
+Result : 13377367.313 ±(99.9%) 147047.679 ops/s
+  Statistics: (min, avg, max) = (13334109.033, 13377367.313, 13419394.617), stdev = 38187.815
+  Confidence interval (99.9%): [13230319.635, 13524414.992]
+
+
+# Run progress: 78.57% complete, ETA 00:02:45
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.processWithSupplierMultistep
+# Parameters: (size = 1024)
+# Warmup Iteration   1: 10606.533 ops/s
+# Warmup Iteration   2: 11907.350 ops/s
+# Warmup Iteration   3: 12058.717 ops/s
+# Warmup Iteration   4: 11973.267 ops/s
+# Warmup Iteration   5: 12059.933 ops/s
+Iteration   1: 11944.333 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.096 secs, GC% = 0.96%, GC count = +231
+             |
+
+Iteration   2: 11973.433 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.099 secs, GC% = 0.99%, GC count = +237
+             |
+
+Iteration   3: 11984.233 ops/s
+          GC | wall time = 10.003 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +232
+             |
+
+Iteration   4: 11988.550 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +236
+             |
+
+Iteration   5: 11991.200 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.099 secs, GC% = 0.99%, GC count = +235
+             |
+
+
+Result : 11976.350 ±(99.9%) 73.694 ops/s
+  Statistics: (min, avg, max) = (11944.333, 11976.350, 11991.200), stdev = 19.138
+  Confidence interval (99.9%): [11902.656, 12050.044]
+
+
+# Run progress: 85.71% complete, ETA 00:01:50
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.processWithoutSupplier
+# Parameters: (size = 1)
+# Warmup Iteration   1: 25524233.300 ops/s
+# Warmup Iteration   2: 28529098.933 ops/s
+# Warmup Iteration   3: 28027019.117 ops/s
+# Warmup Iteration   4: 28231549.033 ops/s
+# Warmup Iteration   5: 28091109.767 ops/s
+Iteration   1: 28046733.117 ops/s
+          GC | wall time = 10.000 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +243
+             |
+
+Iteration   2: 27989894.567 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +242
+             |
+
+Iteration   3: 28044740.250 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.101 secs, GC% = 1.01%, GC count = +245
+             |
+
+Iteration   4: 27917423.633 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.102 secs, GC% = 1.02%, GC count = +242
+             |
+
+Iteration   5: 28011359.017 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.100 secs, GC% = 1.00%, GC count = +247
+             |
+
+
+Result : 28002030.117 ±(99.9%) 203893.966 ops/s
+  Statistics: (min, avg, max) = (27917423.633, 28002030.117, 28046733.117), stdev = 52950.615
+  Confidence interval (99.9%): [27798136.151, 28205924.082]
+
+
+# Run progress: 92.86% complete, ETA 00:00:55
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/jre/bin/java
+# VM options: -Xmx512m -Dfile.encoding=UTF-8
+# Fork: 1 of 1
+# Warmup: 5 iterations, 1 s each
+# Measurement: 5 iterations, 10 s each
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: example.perf.PerfTest.processWithoutSupplier
+# Parameters: (size = 1024)
+# Warmup Iteration   1: 15504.883 ops/s
+# Warmup Iteration   2: 17262.183 ops/s
+# Warmup Iteration   3: 17559.883 ops/s
+# Warmup Iteration   4: 17371.750 ops/s
+# Warmup Iteration   5: 17501.483 ops/s
+Iteration   1: 17268.333 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +232
+             |
+
+Iteration   2: 17200.317 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +229
+             |
+
+Iteration   3: 17296.900 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +232
+             |
+
+Iteration   4: 17319.450 ops/s
+          GC | wall time = 10.002 secs,  GC time = 0.097 secs, GC% = 0.97%, GC count = +232
+             |
+
+Iteration   5: 17164.583 ops/s
+          GC | wall time = 10.001 secs,  GC time = 0.098 secs, GC% = 0.98%, GC count = +231
+             |
+
+
+Result : 17249.917 ±(99.9%) 251.941 ops/s
+  Statistics: (min, avg, max) = (17164.583, 17249.917, 17319.450), stdev = 65.428
+  Confidence interval (99.9%): [16997.976, 17501.858]
+
+
+Benchmark                                        (size)   Mode   Samples         Mean   Mean error    Units
+e.p.PerfTest.liftMultiStep                            1  thrpt         5 15471737.553   197644.846    ops/s
+e.p.PerfTest.liftMultiStep                         1024  thrpt         5    12279.060      121.447    ops/s
+e.p.PerfTest.liftMultiSubscribe                       1  thrpt         5 14447955.163   287840.378    ops/s
+e.p.PerfTest.liftMultiSubscribe                    1024  thrpt         5     8378.420      404.662    ops/s
+e.p.PerfTest.liftSingleSubscribe                      1  thrpt         5 26781152.737   383087.870    ops/s
+e.p.PerfTest.liftSingleSubscribe                   1024  thrpt         5    16862.970      573.027    ops/s
+e.p.PerfTest.processWithSupplier                      1  thrpt         5 27625375.587   585380.799    ops/s
+e.p.PerfTest.processWithSupplier                   1024  thrpt         5    16968.807      303.570    ops/s
+e.p.PerfTest.processWithSupplierMultiSubscribe        1  thrpt         5 15348067.120   127768.007    ops/s
+e.p.PerfTest.processWithSupplierMultiSubscribe     1024  thrpt         5     8529.277      108.034    ops/s
+e.p.PerfTest.processWithSupplierMultistep             1  thrpt         5 13377367.313   147047.679    ops/s
+e.p.PerfTest.processWithSupplierMultistep          1024  thrpt         5    11976.350       73.694    ops/s
+e.p.PerfTest.processWithoutSupplier                   1  thrpt         5 28002030.117   203893.966    ops/s
+e.p.PerfTest.processWithoutSupplier                1024  thrpt         5    17249.917      251.941    ops/s
+
+BUILD SUCCESSFUL
+
+Total time: 12 mins 56.628 secs
+

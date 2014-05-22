@@ -16,7 +16,7 @@ public class APublisher<T> implements Publisher<T> {
         this.f = f;
     }
 
-    public <R> Publisher<R> process(Supplier<Processor<T, R>> supplier) {
+    public <R> APublisher<R> process(Supplier<Processor<T, R>> supplier) {
         return new APublisher<R>((s) -> {
             Processor<T, R> p = supplier.get();
             p.subscribe(s);
@@ -24,7 +24,7 @@ public class APublisher<T> implements Publisher<T> {
         });
     }
 
-    public <R> Publisher<R> lift(Operator<T, R> lift) {
+    public <R> APublisher<R> lift(Operator<T, R> lift) {
         return new APublisher<R>((s) -> {
             f.accept(lift.call(s));
         });

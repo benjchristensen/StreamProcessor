@@ -4,13 +4,15 @@ import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
+import example.perf.FiniteSynchronousLongPublisher;
+
 public class Test {
 
     public static void main(String[] args) {
         Test t = new Test();
         /* these work */
-        //        t.mapToStringViaOperator();
-        t.mapToStringViaProcessorWithSupplier();
+                t.mapToStringViaOperator();
+//        t.mapToStringViaProcessorWithSupplier();
 
         /* these have problems */
         //        t.mapToStringViaProcessor();
@@ -18,30 +20,35 @@ public class Test {
 
     }
 
+    private APublisher<Long> getPublisher() {
+        //        return new LongPublisher();
+        return new FiniteSynchronousLongPublisher(100);
+    }
+
     private void mapToStringViaOperator() {
-        Publisher<String> p = new LongPublisher().lift(new MapOperator<Long, String>(l -> "Num: " + l));
+        Publisher<String> p = getPublisher().lift(new MapOperator<Long, String>(l -> "Num: " + l));
         p.subscribe(new StringSubscriber("A"));
         p.subscribe(new StringSubscriber("B"));
     }
 
     private void mapToStringViaProcessor() {
-        Publisher<String> p = new LongPublisher().process(new MapProcessor<Long, String>(l -> "Num: " + l));
+        Publisher<String> p = getPublisher().process(new MapProcessor<Long, String>(l -> "Num: " + l));
         p.subscribe(new StringSubscriber("A"));
         p.subscribe(new StringSubscriber("B"));
     }
 
     private void mapToStringViaProcessorWithSupplier() {
-        Publisher<String> p = new LongPublisher().process(() -> new MapProcessor<Long, String>(l -> "Num: " + l));
+        Publisher<String> p = getPublisher().process(() -> new MapProcessor<Long, String>(l -> "Num: " + l));
         p.subscribe(new StringSubscriber("A"));
         p.subscribe(new StringSubscriber("B"));
     }
 
     private void mapToStringViaBrokenProcessor() {
-        new LongPublisher().processSimple(new MapProcessor<Long, String>(l -> "Num: " + l)).subscribe(new StringSubscriber("A"));
+        getPublisher().processSimple(new MapProcessor<Long, String>(l -> "Num: " + l)).subscribe(new StringSubscriber("A"));
     }
 
     private void simpleSubscribeAndTake10() {
-        new LongPublisher().subscribe(new Subscriber<Long>() {
+        getPublisher().subscribe(new Subscriber<Long>() {
 
             private Subscription s;
 
