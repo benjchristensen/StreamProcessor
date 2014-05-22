@@ -1,0 +1,4 @@
+// Maven side of things
+subprojects {
+    apply plugin: 'maven' // Java plugin has to have been already applied for the conf2scope mappings to work
+}
